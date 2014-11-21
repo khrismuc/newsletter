@@ -43,7 +43,8 @@ body {
 }
 h1 {
 	font-style: italic;
-	text-shadow: 1px 1px 0 red;
+        color: lightblue;
+	text-shadow: 1px 1px 0 blue;
 }
 CSS;
 
