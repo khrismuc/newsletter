@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Newsletter Form Test</title>
+	</head>
+	<body>
+		<div id="stalkus" style="width: 300px; text-align: center">
+			<form onsubmit="return stalkus(this);">
+				<input type="text" name="email" />
+				<input type="submit" value="GO" />
+			</form>
+		</div>
+		<script>
+
+var ajax_url = "http://blindyouthclothing.com";
+		
+function stalkus(form) {
+	var email = form.email.value;
+	var url = ajax_url + "/newsletter/api.php?ajax=yes&key=rotetomate&action=add&email=" + email;
+	document.querySelector("#stalkus").innerHTML = "<img src='http://blindyouthclothing.com/newsletter/spinner.gif' />";
+	ajax(url);
+	return false;
+}
+
+function ajax(url) {
+	var xmlhttp;
+	xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+	
+	xmlhttp.onreadystatechange = function() {
+		var rs = this.readyState;
+		var st = this.status;
+		// alert("readyState: " + rs + ", status: " + st);
+		if (rs === 4 && st === 200) {
+			ajaxdone(this.responseText == 'done');
+		}
+	};
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+}
+
+function ajaxdone(success) {
+	document.querySelector("#stalkus").innerHTML = success ? "Thanks for subscribing!" : "There was a problem.";
+}
+
+		</script>
+	</body>
+</html>

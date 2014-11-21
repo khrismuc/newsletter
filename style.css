@@ -1,0 +1,134 @@
+html {
+	background-color: #ddd;
+}
+body {
+	font-family: "Helvetica";
+	width: 1200px;
+	margin: 15px auto;
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+	border-radius: 5px
+}
+
+#header {
+	padding: 10px 20px;
+	border-bottom: 1px solid #bbb
+}
+
+#logo {
+	display: block;
+	width:200px;
+	height:56px;
+}
+
+#flash {
+	border: 2px solid #44C9F4;
+	background-color: #D1EFF9;
+	color: #44C9F4;
+	padding: 5px 1em;
+	margin-bottom: 1em;
+}
+
+nav {
+	overflow: auto;
+	margin-bottom: 1em
+}
+
+nav > * {
+	display: block;
+	float: left;
+	padding: 0.5em 1em;
+	margin-right: 0.5em;
+	text-decoration: none;
+	transition: all 0.3s;
+	background-color: #eee;
+	color: #ccc;
+	cursor: default;
+}
+
+nav > a {
+	color: red;
+	cursor: pointer;
+}
+
+nav a:hover {
+	color: white;
+	background-color: black
+}
+
+#prompt {
+	position: relative;
+	top: 10vh;
+	padding: 0 0 1em;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+#prompt h2 {
+	display: block;
+	margin: 0;
+	padding: 4px 0;
+	text-align: center;
+	color: #fff;
+	background-color: red
+}
+
+#prompt div.content {
+	width: 500px;
+	padding: 1em
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+	text-align: center;
+}
+
+#prompt a.button {
+	display: inline-block;
+	padding: 0.5em 1em;
+	margin-right: 1em;
+	text-decoration: none;
+	background-color: #eee;
+}
+
+#prompt div.buttons a.button:last-child {
+	margin-right: 0
+}
+
+#prompt a.button:hover {
+	box-shadow: 0 0 3px 0 grey
+}
+
+#main {
+	position: relative;
+	padding: 0 20px 10px
+}
+
+#editor {
+	display: none;
+	font-size: 13pt;
+	width: 100%;
+}
+
+#prompt div.previewspinner {
+	width: 500px;
+	height: 50px;
+	padding: 1em;
+	transition: all 0.3s;
+}
+
+#preview {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #eee
+}
